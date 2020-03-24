@@ -4,9 +4,9 @@ var module2 = require('./module2');
 
 function onRequest(request, response) {
     response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.write(module1.myString);
-    module1.myFunction();
+    response.write(module2.myVariable);
+    module2.myFunction();
     response.end();
 }
 
-http.createServer(onRequest).listen(7000);
+http.createServer(onRequest).listen(6000);
