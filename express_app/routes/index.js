@@ -6,5 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express', condition:true, anyArray:[1,2,3] });
 });
 
+router.get('/test/:id', function(req,res, next){
+  res.render('test', {output: req.params.id});
+});
 
 module.exports = router;
